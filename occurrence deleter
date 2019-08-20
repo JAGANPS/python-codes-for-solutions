@@ -1,0 +1,14 @@
+def t():
+	l=[]
+	f=int(input("enter the size of the array"))
+	for i in range(1,f+1):
+		print(i,":")
+		j=int(input("enter the element:"))
+		l.append(j)
+	print(l,"are the elements that are given as input")
+	k=int(input("enter the key element to remove its occurences in list:"))
+	while k in l:
+		l.remove(k)
+	print(l)
+  
+  #its used to delete the occurrence of the number given as a key
