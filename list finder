@@ -1,0 +1,13 @@
+def r():
+	l=[]
+	m=int(input("enter the size of the array"))
+	for i in range(0,m+1):
+		print(i)
+		l.append(i)
+	print("the elements in the list is",l)
+	k=int(input("enter the element to be searched in the list:"))
+	if k in l:
+		print("True")
+	else:
+		print("False")
+ # a simple program to give the input into a list and find the key by representing with value "true or false". :)
