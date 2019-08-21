@@ -1,0 +1,21 @@
+def r():
+	j=[]
+	n=int(input("enter the size of the array:"))
+	for i in range(n):
+		k=int(input("enter the element:"))
+		j.append(k)
+	k=int(input("enter the key to be searched:"))
+	first=0
+	last=len(j)
+	l=False
+	while(first<=last and not l):
+		mid=(first+last)//2
+		if j[mid] == k:
+			l=True
+		else:
+			if k < j[mid]:
+				
+				last=mid-1
+			else:
+				first =mid+1
+	return l
