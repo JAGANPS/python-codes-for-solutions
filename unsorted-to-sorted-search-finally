@@ -1,0 +1,27 @@
+def r():
+	j=[]
+	n=int(input("enter the size of the array:"))
+	for i in range(n):
+		k=int(input("enter the element:"))
+		j.append(k)
+	for h in range(len(j)):
+		m=h
+		for i in range(h,len(j)):
+			if j[i] < j[m]:
+				m =i
+		(j[h],j[m])=(j[m],j[h])
+	print(j)
+	k=int(input("enter the key to be serached:"))
+	f=0
+	l=len(j)
+	o=False
+	while (f<=l and not o):
+		mid=(f+l)//2
+		if j[mid] == k:
+			o=True
+		else:
+			if k>j[mid]:
+				l=mid-1
+			else:
+				f=mid+1
+	return o
