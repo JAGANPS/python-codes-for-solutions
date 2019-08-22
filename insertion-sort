@@ -1,0 +1,12 @@
+def r():
+	j=[]
+	n=int(input("enter the size of the array:"))
+	for i in range(n):
+		k=int(input("enter the element:"))
+		j.append(k)
+	for g in range(len(j)):
+		pos=g
+		while pos>0 and j[pos]<j[pos-1]:
+			(j[pos],j[pos-1])=(j[pos-1],j[pos])
+			pos=pos-1
+	print(j)
