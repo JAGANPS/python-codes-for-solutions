@@ -1,0 +1,14 @@
+def t():
+	j=int(input("1st"))
+	k=int(input("2nd"))
+	l=int(input("3rd"))
+	d=[]
+	d.append(j)
+	d.append(k)
+	d.append(l)
+	for i in range(0,3):
+		for j in range(0,3):
+			for m in range(0,3):
+				if(i!=j&j!=m&i!=m):
+					print(d[i],d[j],d[m])
+
