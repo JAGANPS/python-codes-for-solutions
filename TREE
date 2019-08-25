@@ -1,0 +1,42 @@
+class BTreeNode(object):
+        def __init__(self, data):
+            self.data = data
+            self.rChild = None
+            self.lChild = None
+        def __str__(self):
+                        return (self.lChild.__str__() + '<-' if self.lChild != None else '') + self.data.__str__() + ('->' + self.rChild.__str__() if self.rChild != None else '')
+        def insert(self, btreeNode):
+                if self.data > btreeNode.data: #insert left
+                        if self.lChild == None:
+                                self.lChild = btreeNode
+                        else:
+                                self.lChild.insert(btreeNode)
+                else: #insert right
+                        if self.rChild == None:
+                                self.rChild = btreeNode
+                        else:
+                                self.rChild.insert(btreeNode)
+                                 
+                        
+                                 
+def main():
+    btreeRoot = BTreeNode(5)
+    print('inserted %s:' %5, btreeRoot)
+
+    btreeRoot.insert(BTreeNode(9))
+    print ('inserted %s:' %9, btreeRoot)
+
+    btreeRoot.insert(BTreeNode(3))
+    print ('inserted %s:' %3, btreeRoot)
+
+    btreeRoot.insert(BTreeNode(1))
+    print ('inserted %s:' %1, btreeRoot)
+
+    btreeRoot.insert(BTreeNode(2))
+    print ('inserted %s:' %2, btreeRoot)
+
+    btreeRoot.insert(BTreeNode(4))
+    print ('inserted %s:' %4, btreeRoot)
+
+    btreeRoot.insert(BTreeNode(6))
+    print ('inserted %s:' %6, btreeRoot)
