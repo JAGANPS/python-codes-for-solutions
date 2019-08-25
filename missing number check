@@ -1,0 +1,11 @@
+def g():
+	j=[]
+	n=int(input("enter the size of the array:"))
+	for i in range(n):
+		k=int(input("enter the element:"))
+		j.append(k)
+	e=len(j)
+	for i in range(e):
+		if(j[i] != i+1):
+			return i+1
+	return e+1
